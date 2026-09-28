@@ -2,11 +2,6 @@
 
 A custom WordPress theme for a college marketing and student recruitment website. It shows how I build WordPress sites end to end: PHP templates, a custom post type with ACF fields, custom Gutenberg blocks written in React, and a responsive SCSS design system.
 
-**Live demo:** [add link]
-**Figma design:** [add link]
-
-![Home page](docs/screenshot-home.png)
-
 ## Features
 
 - **Custom theme from scratch.** Classic PHP templates (`header.php`, `footer.php`, `page.php`, `single-program.php`, `archive-program.php`, `404.php`) plus `theme.json` for editor colors, fonts and layout widths.
@@ -73,14 +68,8 @@ npm run lint:js
 npm run lint:css
 ```
 
-## Screenshots
-
-| Home | Program page | Mobile |
-| --- | --- | --- |
-| ![Home](docs/screenshot-home.png) | ![Program](docs/screenshot-program.png) | ![Mobile](docs/screenshot-mobile.png) |
-
 ## Author
 
-Kate (Utsanakorn) Chinkanglor
+Kate Chinkanglor
 Portfolio: https://kate-portfolio-theta.vercel.app
 GitHub: https://github.com/utsanakorn
