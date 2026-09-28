@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "northfield/program-grid",
+  "title": "Program List",
+  "category": "northfield",
+  "icon": "welcome-learn-more",
+  "description": "Lists programs from the Program post type, optionally filtered by school. Always shows current data.",
+  "keywords": [
+    "programs",
+    "courses",
+    "diploma"
+  ],
+  "textdomain": "northfield",
+  "supports": {
+    "align": [
+      "wide"
+    ],
+    "html": false
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Programs starting soon"
+    },
+    "count": {
+      "type": "number",
+      "default": 6
+    },
+    "school": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

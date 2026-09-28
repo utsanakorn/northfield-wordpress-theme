@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "northfield/hero",
+  "title": "Intake Hero",
+  "category": "northfield",
+  "icon": "megaphone",
+  "description": "Page-opening banner that leads with the next intake date and a call to apply.",
+  "keywords": [
+    "hero",
+    "banner",
+    "intake"
+  ],
+  "textdomain": "northfield",
+  "supports": {
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false
+  },
+  "attributes": {
+    "intake": {
+      "type": "string",
+      "default": ""
+    },
+    "heading": {
+      "type": "string",
+      "source": "html",
+      "selector": ".nf-hero__heading"
+    },
+    "text": {
+      "type": "string",
+      "source": "html",
+      "selector": ".nf-hero__text"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "See programs"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "/programs/"
+    },
+    "mediaId": {
+      "type": "number"
+    },
+    "mediaUrl": {
+      "type": "string"
+    },
+    "mediaAlt": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "example": {
+    "attributes": {
+      "intake": "Next intake: January 5, 2027",
+      "heading": "Train for the job you want in under a year",
+      "text": "Hands-on diplomas in business, health, design and technology."
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -1,0 +1,13 @@
+/*
+Theme Name: Northfield College
+Theme URI: https://github.com/utsanakorn/northfield-wordpress-theme
+Author: Kate (Utsanakorn) Chinkanglor
+Author URI: https://kate-portfolio-theta.vercel.app
+Description: Custom WordPress theme for a college marketing site. Includes a Program custom post type, ACF fields, custom Gutenberg blocks built with React, and a responsive SCSS design system.
+Version: 1.0.0
+Requires at least: 6.4
+Requires PHP: 8.0
+License: GPL-2.0-or-later
+Text Domain: northfield
+*/
+/* Compiled styles live in assets/css/main.css (built from src/scss). */

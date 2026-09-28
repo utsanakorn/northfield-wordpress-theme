@@ -1,0 +1,197 @@
+@use "tokens" as *;
+
+.container {
+	width: min(100% - #{$space-4 * 2}, #{$container});
+	margin-inline: auto;
+}
+
+.section {
+	padding-block: $space-7;
+}
+
+// Block content: readable measure by default, wider when aligned.
+.entry-content {
+
+	> * {
+		width: min(100% - #{$space-4 * 2}, #{$measure});
+		margin-inline: auto;
+	}
+
+	> .alignwide {
+		width: min(100% - #{$space-4 * 2}, #{$container});
+	}
+
+	> .alignfull {
+		width: 100%;
+	}
+}
+
+// ---------- Header ----------
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	background: $paper;
+	border-bottom: 1px solid $line;
+}
+
+.site-header__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 4rem;
+	gap: $space-4;
+}
+
+.site-brand__name {
+	font-family: $font-display;
+	font-size: $text-lg;
+	font-weight: 700;
+	text-decoration: none;
+	color: $ink;
+}
+
+.nav-toggle {
+	display: grid;
+	place-items: center;
+	width: 2.75rem;
+	height: 2.75rem;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+
+	@media (min-width: $bp-lg) {
+		display: none;
+	}
+}
+
+.nav-toggle__bar,
+.nav-toggle__bar::before,
+.nav-toggle__bar::after {
+	display: block;
+	width: 1.5rem;
+	height: 2px;
+	background: $ink;
+	transition: transform 0.2s ease;
+}
+
+.nav-toggle__bar {
+	position: relative;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+	}
+
+	&::before {
+		top: -0.45rem;
+	}
+
+	&::after {
+		top: 0.45rem;
+	}
+}
+
+.nav-open .nav-toggle__bar {
+	background: transparent;
+
+	&::before {
+		transform: translateY(0.45rem) rotate(45deg);
+	}
+
+	&::after {
+		transform: translateY(-0.45rem) rotate(-45deg);
+	}
+}
+
+.primary-nav {
+	display: none;
+	position: absolute;
+	inset: 100% 0 auto 0;
+	padding: $space-4;
+	background: $paper;
+	border-bottom: 1px solid $line;
+
+	.nav-open & {
+		display: block;
+	}
+
+	@media (min-width: $bp-lg) {
+		display: block;
+		position: static;
+		padding: 0;
+		border: 0;
+	}
+}
+
+.primary-nav__list {
+	display: flex;
+	flex-direction: column;
+	gap: $space-2;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	@media (min-width: $bp-lg) {
+		flex-direction: row;
+		gap: $space-5;
+	}
+
+	a {
+		display: block;
+		padding-block: $space-2;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	[aria-current="page"] {
+		text-decoration: underline;
+		text-decoration-color: $wheat;
+	}
+}
+
+// ---------- Footer ----------
+.site-footer {
+	margin-top: $space-8;
+	padding-block: $space-7;
+	background: $ink;
+	color: $sky;
+
+	a {
+		color: $white;
+	}
+}
+
+.site-footer__inner {
+	display: grid;
+	gap: $space-4;
+
+	@media (min-width: $bp-md) {
+		grid-template-columns: 1fr auto;
+		align-items: center;
+	}
+}
+
+.site-footer__name {
+	margin: 0;
+	font-family: $font-display;
+	font-size: $text-lg;
+	color: $white;
+}
+
+.footer-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $space-4;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-footer__legal {
+	margin: 0;
+	font-size: $text-sm;
+}

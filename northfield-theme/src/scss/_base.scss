@@ -1,0 +1,90 @@
+@use "tokens" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: $font-body;
+	font-size: $text-md;
+	line-height: 1.6;
+	color: $slate;
+	background: $paper;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: $font-display;
+	font-weight: 700;
+	line-height: 1.1;
+	color: $ink;
+	text-wrap: balance;
+}
+
+h2 {
+	font-size: clamp(1.75rem, 2.5vw + 1rem, 2.5rem);
+}
+
+a {
+	color: $ink;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.2em;
+	text-decoration-color: $wheat;
+
+	&:hover {
+		text-decoration-color: currentcolor;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+:focus-visible {
+	outline: 3px solid $wheat;
+	outline-offset: 2px;
+}
+
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+.skip-link {
+	position: absolute;
+	left: $space-4;
+	top: -3rem;
+	z-index: 100;
+	padding: $space-2 $space-4;
+	background: $wheat;
+	color: $ink;
+	font-weight: 600;
+
+	&:focus {
+		top: $space-4;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}

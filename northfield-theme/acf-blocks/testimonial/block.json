@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "acf/testimonial",
+	"title": "Graduate Story",
+	"category": "northfield",
+	"icon": "format-quote",
+	"description": "A quote from a graduate, linked to the program they finished. Built as an ACF block with a PHP template.",
+	"keywords": [ "testimonial", "quote", "graduate" ],
+	"textdomain": "northfield",
+	"supports": { "align": false, "anchor": true, "jsx": false },
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "render.php"
+	}
+}

@@ -1,0 +1,5 @@
+// Editor only: keep placeholder text readable on the dark hero.
+.wp-block-northfield-hero .rich-text [data-rich-text-placeholder]::after {
+	color: rgba(255, 255, 255, 0.55);
+	opacity: 1;
+}

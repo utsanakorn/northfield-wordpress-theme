@@ -1,0 +1,15 @@
+@use "../../scss/tokens" as *;
+
+.wp-block-northfield-program-grid.nf-programs {
+	padding-block: $space-7;
+}
+
+.nf-programs__heading {
+	margin: 0 0 $space-5;
+}
+
+.nf-programs__all {
+	display: inline-block;
+	margin-top: $space-5;
+	font-weight: 600;
+}
